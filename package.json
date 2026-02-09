@@ -1,0 +1,30 @@
+{
+  "name": "vestuviu-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RSVP backend for Vestuviu kvietimas (Express + Prisma + Postgres)",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "postinstall": "prisma generate",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy",
+    "prisma:migrate:dev": "prisma migrate dev"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.16.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "prisma": "^6.16.0"
+  }
+}
